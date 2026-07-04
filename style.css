@@ -1,0 +1,307 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    min-height: 100vh;
+    color: #1f2937;
+    padding: 40px 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 2.6rem;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* =========================
+   GRID
+========================= */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* =========================
+   PANELS
+========================= */
+.form-section,
+.output-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+.form-section h2,
+.output-section h2 {
+    margin-bottom: 25px;
+    color: #1e40af;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #dbeafe;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: .3s;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#fileName {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 15px;
+}
+
+#generateBtn {
+    flex: 1;
+    padding: 15px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+#generateBtn:hover {
+    background: #1d4ed8;
+}
+
+#clearBtn {
+    padding: 15px 25px;
+    background: #ef4444;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+#clearBtn:hover {
+    background: #dc2626;
+}
+
+/* =========================
+   OUTPUT
+========================= */
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#copyBtn {
+    background: #22c55e;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#copyBtn:hover {
+    background: #16a34a;
+}
+
+.output-box {
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 420px;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+.placeholder {
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* =========================
+   LOADING
+========================= */
+.loading {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #2563eb;
+    animation: pulse 1.2s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: .3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+.output-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.output-box::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:992px){
+
+    .main-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    body{
+        padding:20px 12px;
+    }
+
+    .header h1{
+        font-size:2rem;
+    }
+
+    .form-section,
+    .output-section{
+        padding:20px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    #clearBtn{
+        width:100%;
+    }
+
+    #copyBtn{
+        margin-top:10px;
+    }
+
+    .output-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+}
+.action-buttons{
+    display:flex;
+    gap:10px;
+}
+
+#downloadPdfBtn{
+    background:#ef4444;
+    color:white;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+#downloadPdfBtn:hover{
+    background:#dc2626;
+}
